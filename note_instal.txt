@@ -1,0 +1,288 @@
+code fait dans le terminal pour le projet 
+
+.\env\Scripts\activate  
+
+pip install dbt-snowflake
+
+
+pour initialiser le projet va demander de ce connecter avec snow ne pas oublier le compte snowflake (byxftyx-il10365) les id (impejonathan) le PW puis le Role user (DBT_BRIEF_USER)
+dbt init mon_projet_taxi     --> voir plus bas le terminal 
+
+
+pour tester la connexion
+dbt debug
+
+cd .\mon_projet_taxi\
+
+faire les code sql et YAML
+
+pour lancer les vue et table 
+dbt run
+
+pour lancer le projet en local pour le lineage 
+dbt docs generate
+dbt docs serve
+
+
+
+
+________________________
+exemple de mo terminal pour la 1er connexion a snowflake et la bdd 
+
+
+
+(env) PS C:\Users\impej\Desktop\DBT core> cd .\mon_projet_taxi\
+
+(env) PS C:\Users\impej\Desktop\DBT core\mon_projet_taxi> dbt debug
+
+09:11:55  Running with dbt=1.11.0-b2
+
+09:11:55  dbt version: 1.11.0-b2
+
+09:11:55  python version: 3.10.8
+
+09:11:55  python path: C:\Users\impej\Desktop\DBT core\env\Scripts\python.exe
+
+09:11:55  os info: Windows-10-10.0.26100-SP0
+
+09:11:56  Using profiles dir at C:\Users\impej\.dbt
+
+09:11:56  Using profiles.yml file at C:\Users\impej\.dbt\profiles.yml
+
+09:11:56  Using dbt_project.yml file at C:\Users\impej\Desktop\DBT core\mon_projet_taxi\dbt_project.yml
+
+09:11:56  adapter type: snowflake
+
+09:11:56  adapter version: 1.10.2
+
+09:11:57  Configuration:
+
+09:11:57    profiles.yml file [OK found and valid]
+
+09:11:57    dbt_project.yml file [OK found and valid]
+
+09:11:57  Required dependencies:
+
+09:11:57   - git [OK found]
+
+09:11:55  python version: 3.10.8
+
+09:11:55  python path: C:\Users\impej\Desktop\DBT core\env\Scripts\python.exe
+
+09:11:55  os info: Windows-10-10.0.26100-SP0
+
+09:11:56  Using profiles dir at C:\Users\impej\.dbt
+
+09:11:56  Using profiles.yml file at C:\Users\impej\.dbt\profiles.yml
+
+09:11:56  Using dbt_project.yml file at C:\Users\impej\Desktop\DBT core\mon_projet_taxi\dbt_project.yml
+
+09:11:56  adapter type: snowflake
+
+09:11:56  adapter version: 1.10.2
+
+09:11:57  Configuration:
+
+09:11:57    profiles.yml file [OK found and valid]
+
+09:11:57    dbt_project.yml file [OK found and valid]
+
+09:11:57  Required dependencies:
+
+09:11:57   - git [OK found]
+
+09:11:55  python path: C:\Users\impej\Desktop\DBT core\env\Scripts\python.exe
+
+09:11:55  os info: Windows-10-10.0.26100-SP0
+
+09:11:56  Using profiles dir at C:\Users\impej\.dbt
+
+09:11:56  Using profiles.yml file at C:\Users\impej\.dbt\profiles.yml
+
+09:11:56  Using dbt_project.yml file at C:\Users\impej\Desktop\DBT core\mon_projet_taxi\dbt_project.yml
+
+09:11:56  adapter type: snowflake
+
+09:11:56  adapter version: 1.10.2
+
+09:11:57  Configuration:
+
+09:11:57    profiles.yml file [OK found and valid]
+
+09:11:57    dbt_project.yml file [OK found and valid]
+
+09:11:57  Required dependencies:
+
+09:11:57   - git [OK found]
+
+09:11:56  Using profiles dir at C:\Users\impej\.dbt
+
+09:11:56  Using profiles.yml file at C:\Users\impej\.dbt\profiles.yml
+
+09:11:56  Using dbt_project.yml file at C:\Users\impej\Desktop\DBT core\mon_projet_taxi\dbt_project.yml
+
+09:11:56  adapter type: snowflake
+
+09:11:56  adapter version: 1.10.2
+
+09:11:57  Configuration:
+
+09:11:57    profiles.yml file [OK found and valid]
+
+09:11:57    dbt_project.yml file [OK found and valid]
+
+09:11:57  Required dependencies:
+
+09:11:57   - git [OK found]
+
+09:11:57  Connection:
+
+09:11:57    account: byxftyx-il10365
+
+09:11:57    user: impejonathan
+
+09:11:57    database: NYC_TAXI_DB
+
+09:11:57    warehouse: NYC_TAXI_WH
+
+09:11:57    role: DBT_BRIEF_USER
+
+09:11:57    schema: RAW
+
+09:11:57    authenticator: None
+
+09:11:57    oauth_client_id: None
+
+09:11:57    query_tag: None
+
+09:11:57  Configuration:
+
+09:11:57    profiles.yml file [OK found and valid]
+
+09:11:57    dbt_project.yml file [OK found and valid]
+
+09:11:57  Required dependencies:
+
+09:11:57   - git [OK found]
+
+09:11:57  Connection:
+
+09:11:57    account: byxftyx-il10365
+
+09:11:57    user: impejonathan
+
+09:11:57    database: NYC_TAXI_DB
+
+09:11:57    warehouse: NYC_TAXI_WH
+
+09:11:57    role: DBT_BRIEF_USER
+
+09:11:57    schema: RAW
+
+09:11:57    authenticator: None
+
+09:11:57    oauth_client_id: None
+
+09:11:57    query_tag: None
+
+09:11:57  Connection:
+
+09:11:57    account: byxftyx-il10365
+
+09:11:57    user: impejonathan
+
+09:11:57    database: NYC_TAXI_DB
+
+09:11:57    warehouse: NYC_TAXI_WH
+
+09:11:57    role: DBT_BRIEF_USER
+
+09:11:57    schema: RAW
+
+09:11:57    authenticator: None
+
+09:11:57    oauth_client_id: None
+
+09:11:57    query_tag: None
+
+09:11:57    client_session_keep_alive: False
+
+09:11:57    host: None
+
+09:11:57    port: None
+
+09:11:57    oauth_client_id: None
+
+09:11:57    query_tag: None
+
+09:11:57    client_session_keep_alive: False
+
+09:11:57    host: None
+
+09:11:57    port: None
+
+09:11:57    client_session_keep_alive: False
+
+09:11:57    host: None
+
+09:11:57    port: None
+
+09:11:57    proxy_host: None
+
+09:11:57    proxy_port: None
+
+09:11:57    protocol: None
+
+09:11:57    connect_retries: 1
+
+09:11:57    proxy_host: None
+
+09:11:57    proxy_port: None
+
+09:11:57    protocol: None
+
+09:11:57    connect_retries: 1
+
+09:11:57    connect_timeout: None
+
+09:11:57    retry_on_database_errors: False
+
+09:11:57    protocol: None
+
+09:11:57    connect_retries: 1
+
+09:11:57    connect_timeout: None
+
+09:11:57    retry_on_database_errors: False
+
+09:11:57    connect_timeout: None
+
+09:11:57    retry_on_database_errors: False
+
+09:11:57    retry_all: False
+
+09:11:57    insecure_mode: False
+
+09:11:57    retry_on_database_errors: False
+
+09:11:57    retry_all: False
+
+09:11:57    insecure_mode: False
+
+09:11:57    retry_all: False
+
+09:11:57    insecure_mode: False
+
+09:11:57    insecure_mode: False
+
+09:11:57    reuse_connections: True
+
+09:11:57    s3_stage_vpce_dns_name: None
+
+09:11:57  Registered adapter: snowflake=1.10.2
+
+09:12:01    Connection test: [OK connection ok]
+
+09:12:01  All checks passed!
+
+(env) PS C:\Users\impej\Desktop\DBT core\mon_projet_taxi>

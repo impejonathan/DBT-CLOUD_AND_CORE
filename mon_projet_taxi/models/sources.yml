@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+  - name: raw
+    database: NYC_TAXI_DB
+    schema: raw
+    tables:
+      - name: yellow_taxi_trips
+      - name: yellow_taxi_trips_1
